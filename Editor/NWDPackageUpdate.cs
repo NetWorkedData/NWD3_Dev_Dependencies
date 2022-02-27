@@ -5,10 +5,9 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
-namespace NetWorkedData.UnityEditor.PackageUpdate
+namespace NetWorkedData.PackageUpdate
 {
-
-    public abstract class NWDMenus
+    public abstract class NWDMenuPackage
     {
         public const string K_NETWORKEDDATA = "Net-Worked-Data test/";
         public const int K_START_INDEX = 0;
