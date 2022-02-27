@@ -15,14 +15,11 @@ namespace NetWorkedData.PackageUpdate
         [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 1)]
         public static void DevelopedBy()
         {
-            if (EditorUtility.DisplayDialog(
-                "Update manifest json",
-                "remove Hash and do update?",
-                "cancel",
-                "update"))
-            {
-            }
-            else
+            if (!EditorUtility.DisplayDialog(
+                "Update manifest file",
+                "Remove hash information and force update all Git packages?",
+                "Cancel",
+                "Update"))
             {
                 string tPackagesFolderPath = Path.Combine(Application.dataPath, "../Packages");
                 string tFilePath = tPackagesFolderPath + "/packages-lock.json";
