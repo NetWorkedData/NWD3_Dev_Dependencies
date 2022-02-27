@@ -32,7 +32,10 @@ namespace NetWorkedData.PackageUpdate
                 //:{
                 //    "com.net-worked-data.dependencies":{ "version":"https://github.com/NetWorkedData/NWD3_Dev_Dependencies.git","depth":0,"source":"git","dependencies":{ "com.unity.nuget.newtonsoft-json":"2.0.0"},"hash":"4508dd1327d1f208f7faf6f13638f4bb2f533465"}
                 //}
-                string tPattern = "(\\,\"hash\"\\: \"[A-Za-z0-9]*\")";
+                
+                //       "hash": "bec10cb2a17879b1c6daf561704d181ba741f587"
+
+                string tPattern = "(,\"hash\": \"[A-Za-z0-9]*\")";
                 string tReplacement = "";
                 Regex rgx = new Regex(tPattern);
                 string tRresult = rgx.Replace(tFileContent, tReplacement);
