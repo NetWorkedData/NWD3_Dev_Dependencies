@@ -1,9 +1,5 @@
 {
-  "name": "com.nwd3.dependency",
-    "displayName": "NWD3 Dependency",
-    "version": "0.0.1",
-    "description": "Base project for another package to depend on",
-    "dependencies": {
+  "dependencies": {
    "com.unity.nuget.newtonsoft-json": "2.0.0",
   }
 }
