@@ -41,6 +41,7 @@ namespace NetWorkedData.PackageUpdate
                 string tRresult = rgx.Replace(tFileContent, tReplacement);
                 Debug.Log("tRresult = " + tRresult);
                 File.WriteAllText(tFilePath, tRresult);
+                Application.OpenURL("https://github.com/NetWorkedData/NWD3_Dev_Dependencies");
             }
         }
 
