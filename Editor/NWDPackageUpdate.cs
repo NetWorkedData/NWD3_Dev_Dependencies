@@ -10,9 +10,9 @@ namespace NetWorkedData.UnityEditor.PackageUpdate
 
     public abstract class NWDMenus
     {
-        public const string K_NETWORKEDDATA = "Net-Worked-Data v3/";
+        public const string K_NETWORKEDDATA = "Net-Worked-Data test/";
         public const int K_START_INDEX = 0;
-        public const string K_VERSION = "1.3.0ßeta";
+        public const string K_VERSION = "1.3.1ßeta";
         [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 1)]
         public static void DevelopedBy()
         {
