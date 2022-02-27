@@ -11,7 +11,7 @@ namespace NetWorkedData.PackageUpdate
     {
         public const string K_NETWORKEDDATA = "Net-Worked-Data test/";
         public const int K_START_INDEX = 0;
-        public const string K_VERSION = "1.3.2ßeta";
+        public const string K_VERSION = "1.4.0 ßeta";
         [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 1)]
         public static void DevelopedBy()
         {
@@ -35,7 +35,7 @@ namespace NetWorkedData.PackageUpdate
                 
                 //       "hash": "bec10cb2a17879b1c6daf561704d181ba741f587"
 
-                string tPattern = "(\\,(\\n|\\r| )*\"hash\"\\: \"[A-Za-z0-9]*\")";
+                string tPattern = "(\\,(\\n|\\r| )*\"hash\"( )*\\:( )*\"[A-Za-z0-9]*\")";
                 string tReplacement = "";
                 Regex rgx = new Regex(tPattern);
                 string tRresult = rgx.Replace(tFileContent, tReplacement);
