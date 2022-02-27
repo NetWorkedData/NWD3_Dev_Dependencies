@@ -11,7 +11,7 @@ namespace NetWorkedData.PackageUpdate
     {
         public const string K_NETWORKEDDATA = "Net-Worked-Data test/";
         public const int K_START_INDEX = 0;
-        public const string K_VERSION = "1.4.6 ßeta";
+        public const string K_VERSION = "1.5.0 ßeta";
         [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 1)]
         public static void DevelopedBy()
         {
@@ -27,19 +27,10 @@ namespace NetWorkedData.PackageUpdate
                 string tPackagesFolderPath = Path.Combine(Application.dataPath, "../Packages");
                 string tFilePath = tPackagesFolderPath + "/packages-lock.json";
                 string tFileContent = File.ReadAllText(tFilePath);
-                Debug.Log("tFileContent = " + tFileContent);
-
-                //:{
-                //    "com.net-worked-data.dependencies":{ "version":"https://github.com/NetWorkedData/NWD3_Dev_Dependencies.git","depth":0,"source":"git","dependencies":{ "com.unity.nuget.newtonsoft-json":"2.0.0"},"hash":"4508dd1327d1f208f7faf6f13638f4bb2f533465"}
-                //}
-                
-                //       "hash": "bec10cb2a17879b1c6daf561704d181ba741f587"
-
-                string tPattern = "(\\,(\\n|\\r| )*\"hash\"( )*\\:( )*\"[A-Za-z0-9]*\")";
-                string tReplacement = "";
-                Regex rgx = new Regex(tPattern);
-                string tRresult = rgx.Replace(tFileContent, tReplacement);
-                Debug.Log("tRresult = " + tRresult);
+                //Debug.Log("tFileContent = " + tFileContent);
+                Regex rgx = new Regex("(\\,(\\n|\\r| )*\"hash\"( )*\\:( )*\"[A-Za-z0-9]*\")");
+                string tRresult = rgx.Replace(tFileContent, string.Empty);
+                //Debug.Log("tRresult = " + tRresult);
                 File.WriteAllText(tFilePath, tRresult);
                 Application.OpenURL("https://github.com/NetWorkedData/NWD3_Dev_Dependencies");
             }
