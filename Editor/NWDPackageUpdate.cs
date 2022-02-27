@@ -35,7 +35,7 @@ namespace NetWorkedData.PackageUpdate
                 
                 //       "hash": "bec10cb2a17879b1c6daf561704d181ba741f587"
 
-                string tPattern = "(,\"hash\": \"[A-Za-z0-9]*\")";
+                string tPattern = "(//,(\n|\r| )*\"hash\"\\: \"[A-Za-z0-9]*\")";
                 string tReplacement = "";
                 Regex rgx = new Regex(tPattern);
                 string tRresult = rgx.Replace(tFileContent, tReplacement);
