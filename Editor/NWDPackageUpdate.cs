@@ -9,10 +9,10 @@ namespace NetWorkedData.PackageUpdate
 {
     public abstract class NWDMenuPackage
     {
-        public const string K_NETWORKEDDATA = "Net-Worked-Data v3/";
+        public const string K_NETWORKEDDATA = "Net-Worked-Data v3/Team Dev";
         public const int K_START_INDEX = 0;
-        public const string K_VERSION = "1.5.1a";
-        [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 1)]
+        public const string K_VERSION = "1.5.2a";
+        [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 300)]
         public static void DevelopedBy()
         {
             if (!EditorUtility.DisplayDialog(
