@@ -11,7 +11,7 @@ namespace NetWorkedData.PackageUpdate
     {
         public const string K_NETWORKEDDATA = "Net-Worked-Data v3/Team Dev/";
         public const int K_START_INDEX = 0;
-        public const string K_VERSION = "1.5.2a";
+        public const string K_VERSION = "1.05.003a";
         [MenuItem(K_NETWORKEDDATA + "Update Git Package " + K_VERSION, false, K_START_INDEX + 300)]
         public static void DevelopedBy()
         {
